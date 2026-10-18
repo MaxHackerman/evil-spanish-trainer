@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "presente-ar",
+  "title": "Настоящее время: глаголы на -ar",
+  "description": "Самая большая группа глаголов. Одна схема из шести окончаний — и ты спрягаешь тысячи слов.",
+  "level": "A1",
+  "ruleId": "presente-ar",
+  "batchSize": 12,
+  "generators": [
+    {
+      "type": "conjugate",
+      "skill": "presente-ar",
+      "tense": "presente",
+      "count": 5,
+      "verbs": ["hablar", "trabajar", "estudiar", "comprar", "cocinar", "caminar", "escuchar", "mirar", "tomar", "necesitar", "buscar", "llamar", "viajar", "bailar", "cantar", "pagar", "alquilar", "ayudar", "esperar", "llegar", "preguntar", "usar", "desayunar", "cenar", "limpiar", "ganar"]
+    }
+  ],
+  "tasks": [
+    { "id": "ar-s1", "type": "conjugate", "skill": "presente-ar", "verb": "trabajar", "person": "yo", "tense": "presente", "sentence": "Yo ___ en una oficina.", "translation": "Я работаю в офисе." },
+    { "id": "ar-s2", "type": "conjugate", "skill": "presente-ar", "verb": "hablar", "person": "tu", "tense": "presente", "sentence": "¿Tú ___ español?", "translation": "Ты говоришь по-испански?" },
+    { "id": "ar-s3", "type": "conjugate", "skill": "presente-ar", "verb": "cocinar", "person": "el", "tense": "presente", "sentence": "Ella ___ la cena.", "translation": "Она готовит ужин." },
+    { "id": "ar-s4", "type": "conjugate", "skill": "presente-ar", "verb": "alquilar", "person": "nosotros", "tense": "presente", "region": "es", "sentence": "Nosotros ___ un piso en Madrid.", "translation": "Мы снимаем квартиру в Мадриде." },
+    { "id": "ar-s4l", "type": "conjugate", "skill": "presente-ar", "verb": "alquilar", "person": "nosotros", "tense": "presente", "region": "latam", "sentence": "Nosotros ___ un departamento en Lima.", "translation": "Мы снимаем квартиру в Лиме." },
+    { "id": "ar-s5", "type": "conjugate", "skill": "presente-ar", "verb": "viajar", "person": "vosotros", "tense": "presente", "sentence": "Vosotros ___ mucho.", "translation": "Вы (ребята) много путешествуете." },
+    { "id": "ar-s6", "type": "conjugate", "skill": "presente-ar", "verb": "escuchar", "person": "ellos", "tense": "presente", "sentence": "Ustedes ___ música todo el día.", "translation": "Вы (все) слушаете музыку весь день.", "hint": "**ustedes** спрягается как **ellos**." },
+    { "id": "ar-s7", "type": "conjugate", "skill": "presente-ar", "verb": "trabajar", "person": "ellos", "tense": "presente", "sentence": "Mis padres ___ en un banco.", "translation": "Мои родители работают в банке." },
+    { "id": "ar-s8", "type": "conjugate", "skill": "presente-ar", "verb": "pagar", "person": "yo", "tense": "presente", "sentence": "Yo ___ con tarjeta.", "translation": "Я плачу картой." },
+    { "id": "ar-s9", "type": "conjugate", "skill": "presente-ar", "verb": "buscar", "person": "tu", "tense": "presente", "sentence": "¿Qué ___?", "translation": "Что ты ищешь?", "hint": "Местоимение пропущено, но по переводу видно лицо." },
+    { "id": "ar-s10", "type": "conjugate", "skill": "presente-ar", "verb": "estudiar", "person": "nosotros", "tense": "presente", "sentence": "Mi novia y yo ___ español.", "translation": "Мы с невестой учим испанский.", "hint": "«Она и я» = «мы»." },
+    { "id": "ar-s11", "type": "conjugate", "skill": "presente-ar", "verb": "esperar", "person": "el", "tense": "presente", "sentence": "Él ___ el autobús.", "translation": "Он ждёт автобус." },
+    { "id": "ar-s12", "type": "conjugate", "skill": "presente-ar", "verb": "tomar", "person": "yo", "tense": "presente", "sentence": "Por la mañana ___ café.", "translation": "Утром я пью кофе." },
+    { "id": "ar-s13", "type": "conjugate", "skill": "presente-ar", "verb": "necesitar", "person": "el", "tense": "presente", "sentence": "Usted ___ un médico.", "translation": "Вам нужен врач.", "hint": "**usted** («вы» вежливо) спрягается как **él**." },
+    { "id": "ar-s14", "type": "conjugate", "skill": "presente-ar", "verb": "llegar", "person": "ellos", "tense": "presente", "sentence": "Los niños ___ a las ocho.", "translation": "Дети приходят в восемь." },
+    { "id": "ar-s15", "type": "conjugate", "skill": "presente-ar", "verb": "limpiar", "person": "nosotros", "tense": "presente", "sentence": "Los sábados ___ la casa.", "translation": "По субботам мы убираем дом." },
+
+    {
+      "id": "ar-c1", "type": "choice", "skill": "presente-ar",
+      "question": "Какое окончание у глаголов на -ar для **nosotros**?",
+      "options": ["-amos", "-emos", "-an", "-imos"], "answer": "-amos",
+      "explanation": "Глаголы на -ar: -o, -as, -a, **-amos**, -áis, -an.",
+      "wrongExplanations": { "-emos": "-emos — это окончание глаголов на -er (comemos).", "-imos": "-imos — это окончание глаголов на -ir (vivimos).", "-an": "-an — это ellos / ustedes." }
+    },
+    {
+      "id": "ar-c2", "type": "choice", "skill": "presente-ar",
+      "question": "Ellos ___ (cantar) muy bien.",
+      "options": ["cantan", "cantamos", "canta", "cantáis"], "answer": "cantan",
+      "explanation": "ellos → окончание **-an**: cantan."
+    },
+    {
+      "id": "ar-c3", "type": "choice", "skill": "presente-ar",
+      "question": "Как сказать «Вы говорите» вежливо, обращаясь к одному человеку?",
+      "options": ["Usted habla", "Tú hablas", "Ustedes hablan", "Vosotros habláis"], "answer": "Usted habla",
+      "explanation": "Вежливое **usted** грамматически ведёт себя как «он»: глагол в форме 3-го лица — **habla**.",
+      "wrongExplanations": { "Tú hablas": "tú — это «ты», на ты.", "Ustedes hablan": "ustedes — «вы» для нескольких человек." }
+    },
+    {
+      "id": "ar-c4", "type": "choice", "skill": "presente-ar",
+      "question": "Найди лишнее: какая форма **не** от глагола «bailar» в настоящем времени?",
+      "options": ["bailar", "bailo", "bailas", "bailamos"], "answer": "bailar",
+      "explanation": "**bailar** — это инфинитив (начальная форма, «танцевать»). Остальные — личные формы: bailo, bailas, bailamos."
+    },
+    {
+      "id": "ar-c5", "type": "choice", "skill": "presente-ar",
+      "question": "«Я не работаю» — где правильно стоит **no**?",
+      "options": ["No trabajo.", "Trabajo no.", "Yo trabajo no.", "No yo trabajo."], "answer": "No trabajo.",
+      "explanation": "Отрицание **no** ставится прямо перед глаголом: (Yo) **no trabajo**."
+    },
+    {
+      "id": "ar-c6", "type": "choice", "skill": "presente-ar", "region": "latam",
+      "question": "В Латинской Америке так говорят группе друзей: «Вы танцуете?»",
+      "options": ["¿Ustedes bailan?", "¿Vosotros bailáis?", "¿Usted baila?", "¿Tú bailas?"], "answer": "¿Ustedes bailan?",
+      "explanation": "В Латинской Америке **vosotros** не используют: «вы» для нескольких человек — всегда **ustedes** + форма как у ellos.",
+      "wrongExplanations": { "¿Vosotros bailáis?": "Так скажут в Испании, а в Латинской Америке это прозвучит как из старой книги." }
+    },
+
+    { "id": "ar-o1", "type": "order", "skill": "presente-ar", "translation": "Я говорю по-испански.", "words": ["Yo", "hablo", "español"], "distractors": ["habla"], "alternatives": [["Hablo", "yo", "español"]] },
+    { "id": "ar-o2", "type": "order", "skill": "presente-ar", "translation": "Мы не работаем по субботам.", "words": ["Nosotros", "no", "trabajamos", "los", "sábados"], "distractors": ["trabajan"], "alternatives": [["Los", "sábados", "nosotros", "no", "trabajamos"]] },
+    { "id": "ar-o3", "type": "order", "skill": "presente-ar", "translation": "Ты слушаешь музыку?", "words": ["Tú", "escuchas", "música"], "distractors": ["escucho"], "alternatives": [["Escuchas", "tú", "música"]] },
+    { "id": "ar-o4", "type": "order", "skill": "presente-ar", "translation": "Они покупают хлеб в магазине.", "words": ["Ellos", "compran", "pan", "en", "la", "tienda"], "distractors": ["compra"] },
+    { "id": "ar-o5", "type": "order", "skill": "presente-ar", "translation": "Я жду автобус.", "words": ["Yo", "espero", "el", "autobús"], "distractors": ["la"] },
+    { "id": "ar-o6", "type": "order", "skill": "presente-ar", "translation": "Она не готовит ужин.", "words": ["Ella", "no", "cocina", "la", "cena"], "distractors": ["cocinas"] }
+  ]
+}

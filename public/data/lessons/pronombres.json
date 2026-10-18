@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pronombres",
+  "title": "Личные местоимения: я, ты, вы…",
+  "description": "С кем говорим: tú или usted, vosotros или ustedes. Без этого не поставить глагол в нужную форму.",
+  "level": "A1",
+  "ruleId": "pronombres",
+  "batchSize": 8,
+  "tasks": [
+    { "id": "pr-1", "type": "choice", "skill": "pronombres", "question": "мы (компания, где все — женщины)", "options": ["nosotras", "nosotros", "vosotras", "ellas"], "answer": "nosotras", "explanation": "У «мы», «вы» (vosotros) и «они» есть женская форма на **-as**. Её используют, только если в группе одни женщины." },
+    { "id": "pr-2", "type": "choice", "skill": "pronombres", "question": "они (2 мужчины и 5 женщин)", "options": ["ellos", "ellas"], "answer": "ellos", "explanation": "Если в группе есть хотя бы один мужчина, используется мужская форма: **ellos**." },
+    { "id": "pr-3", "type": "choice", "skill": "pronombres", "question": "вы (вежливо, одному человеку — например, врачу)", "options": ["usted", "tú", "ustedes", "vosotros"], "answer": "usted", "explanation": "**usted** — вежливое «вы» одному человеку. Глагол с ним стоит в форме как для «он»." },
+    { "id": "pr-4", "type": "choice", "skill": "pronombres", "region": "es", "question": "вы (компания друзей, Испания)", "options": ["vosotros", "ustedes", "usted"], "answer": "vosotros", "explanation": "В Испании дружеское «вы» для нескольких человек — **vosotros**, а ustedes — вежливое.", "wrongExplanations": { "ustedes": "В Испании ustedes звучит официально: так обращаются к клиентам или незнакомым людям." } },
+    { "id": "pr-5", "type": "choice", "skill": "pronombres", "region": "latam", "question": "вы (компания друзей, Латинская Америка)", "options": ["ustedes", "vosotros", "usted"], "answer": "ustedes", "explanation": "В Латинской Америке «вы» для нескольких человек — всегда **ustedes**, и для друзей, и официально." },
+    { "id": "pr-6", "type": "choice", "skill": "pronombres", "question": "Где местоимение «ты»?", "options": ["tú", "tu"], "answer": "tú", "explanation": "**tú** (с ударением) — «ты». **tu** без ударения — «твой»: tu casa = твой дом." },
+    { "id": "pr-7", "type": "choice", "skill": "pronombres", "question": "она", "options": ["ella", "él", "ellas", "usted"], "answer": "ella", "explanation": "**ella** — она, **él** — он, **ellas** — они (женщины)." },
+    { "id": "pr-8", "type": "choice", "skill": "pronombres", "question": "С какой формой глагола употребляется **ustedes**?", "options": ["как ellos: hablan", "как vosotros: habláis", "как nosotros: hablamos"], "answer": "как ellos: hablan", "explanation": "**ustedes** по смыслу «вы», но глагол ставится в форму 3-го лица множественного числа, как для ellos: ustedes **hablan**." },
+    { "id": "pr-9", "type": "text", "skill": "pronombres", "question": "Напиши по-испански «он»", "answers": ["él"], "explanation": "«Он» — **él**, с ударением.", "commonMistakes": [{ "answer": "el", "explanation": "**el** без ударения — это артикль (el libro), а не «он». Ударение здесь меняет смысл." }] },
+    { "id": "pr-10", "type": "text", "skill": "pronombres", "question": "Напиши по-испански «я»", "answers": ["yo"], "explanation": "«Я» — **yo**. Часто его опускают: форма глагола и так показывает лицо (hablo = я говорю)." },
+    { "id": "pr-11", "type": "choice", "skill": "pronombres", "question": "Почему в испанском часто говорят просто **hablo**, а не yo hablo?", "options": ["окончание уже показывает лицо", "так грубее", "yo бывает только в вопросах"], "answer": "окончание уже показывает лицо", "explanation": "Окончание -o однозначно говорит «я», поэтому местоимение обычно опускают. **yo** добавляют для акцента: «А **я** работаю»." }
+  ]
+}

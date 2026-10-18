@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "sustantivos",
+  "title": "Слова и артикли: дом, еда, вещи",
+  "description": "Что на картинке? Учим слова сразу с артиклем el / la — так род запоминается сам.",
+  "level": "A1",
+  "ruleId": "articulos",
+  "batchSize": 10,
+  "tasks": [
+    { "id": "p-dog", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🐶" }, "ru": "собака", "noun": { "word": "perro", "gender": "m" } },
+    { "id": "p-cat", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🐱" }, "ru": "кошка, кот", "noun": { "word": "gato", "gender": "m" } },
+    { "id": "p-house", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🏠" }, "ru": "дом", "noun": { "word": "casa", "gender": "f" } },
+    { "id": "p-apple", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🍎" }, "ru": "яблоко", "noun": { "word": "manzana", "gender": "f" } },
+    { "id": "p-book", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "📖" }, "ru": "книга", "noun": { "word": "libro", "gender": "m" } },
+    { "id": "p-chair", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🪑" }, "ru": "стул", "noun": { "word": "silla", "gender": "f" } },
+    { "id": "p-car", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🚗" }, "ru": "машина", "noun": { "es": { "word": "coche", "gender": "m" }, "latam": { "word": "carro", "gender": "m" } }, "alsoAccept": [{ "word": "auto", "gender": "m" }] },
+    { "id": "p-pc", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "💻" }, "ru": "компьютер", "noun": { "es": { "word": "ordenador", "gender": "m" }, "latam": { "word": "computadora", "gender": "f" } } },
+    { "id": "p-phone", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "📱" }, "ru": "мобильный телефон", "noun": { "es": { "word": "móvil", "gender": "m" }, "latam": { "word": "celular", "gender": "m" } }, "alsoAccept": [{ "word": "teléfono", "gender": "m" }] },
+    { "id": "p-potato", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🥔" }, "ru": "картофель", "noun": { "es": { "word": "patata", "gender": "f" }, "latam": { "word": "papa", "gender": "f" } } },
+    { "id": "p-juice", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🧃" }, "ru": "сок", "noun": { "es": { "word": "zumo", "gender": "m" }, "latam": { "word": "jugo", "gender": "m" } } },
+    { "id": "p-banana", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🍌" }, "ru": "банан", "noun": { "es": { "word": "plátano", "gender": "m" }, "latam": { "word": "banana", "gender": "f" } }, "alsoAccept": [{ "word": "banano", "gender": "m" }] },
+    { "id": "p-coffee", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "☕" }, "ru": "кофе", "noun": { "word": "café", "gender": "m" } },
+    { "id": "p-sun", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "☀️" }, "ru": "солнце", "noun": { "word": "sol", "gender": "m" } },
+    { "id": "p-moon", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🌙" }, "ru": "луна", "noun": { "word": "luna", "gender": "f" } },
+    { "id": "p-water", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "💧" }, "ru": "вода", "noun": { "word": "agua", "gender": "f", "article": "el" } },
+    { "id": "p-map", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🗺️" }, "ru": "карта", "noun": { "word": "mapa", "gender": "m" } },
+    { "id": "p-hand", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "✋" }, "ru": "рука (кисть)", "noun": { "word": "mano", "gender": "f" } },
+    { "id": "p-flower", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🌸" }, "ru": "цветок", "noun": { "word": "flor", "gender": "f" } },
+    { "id": "p-bread", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🍞" }, "ru": "хлеб", "noun": { "word": "pan", "gender": "m" } },
+    { "id": "p-cheese", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🧀" }, "ru": "сыр", "noun": { "word": "queso", "gender": "m" } },
+    { "id": "p-egg", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🥚" }, "ru": "яйцо", "noun": { "word": "huevo", "gender": "m" } },
+    { "id": "p-key", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🔑" }, "ru": "ключ", "noun": { "word": "llave", "gender": "f" } },
+    { "id": "p-door", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🚪" }, "ru": "дверь", "noun": { "word": "puerta", "gender": "f" } },
+    { "id": "p-bed", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🛏️" }, "ru": "кровать", "noun": { "word": "cama", "gender": "f" } },
+    { "id": "p-tree", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🌳" }, "ru": "дерево", "noun": { "word": "árbol", "gender": "m" } },
+    { "id": "p-plane", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "✈️" }, "ru": "самолёт", "noun": { "word": "avión", "gender": "m" } },
+    { "id": "p-bike", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🚲" }, "ru": "велосипед", "noun": { "word": "bicicleta", "gender": "f" }, "alsoAccept": [{ "word": "bici", "gender": "f" }] },
+    { "id": "p-clock", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "⏰" }, "ru": "часы", "noun": { "word": "reloj", "gender": "m" } },
+    { "id": "p-wine", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🍷" }, "ru": "вино", "noun": { "word": "vino", "gender": "m" } },
+    { "id": "p-beer", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🍺" }, "ru": "пиво", "noun": { "word": "cerveza", "gender": "f" } },
+    { "id": "p-milk", "type": "picture", "skill": "articulos", "image": { "kind": "emoji", "value": "🥛" }, "ru": "молоко", "noun": { "word": "leche", "gender": "f" } },
+
+    {
+      "id": "art-c1", "type": "choice", "skill": "articulos",
+      "question": "___ día (день)",
+      "options": ["el", "la"], "answer": "el",
+      "explanation": "**el día** — частое исключение: слово кончается на -a, но мужского рода."
+    },
+    {
+      "id": "art-c2", "type": "choice", "skill": "articulos",
+      "question": "___ problema (проблема)",
+      "options": ["el", "la"], "answer": "el",
+      "explanation": "Слова на **-ma** греческого происхождения — мужского рода: **el problema**, el sistema, el programa, el tema, el idioma."
+    },
+    {
+      "id": "art-c3", "type": "choice", "skill": "articulos",
+      "question": "___ foto (фотография)",
+      "options": ["el", "la"], "answer": "la",
+      "explanation": "**la foto** — сокращение от la fotografía, поэтому женский род, хоть и на -o. Так же: la moto, la radio."
+    },
+    {
+      "id": "art-c4", "type": "choice", "skill": "articulos",
+      "question": "___ ciudad (город)",
+      "options": ["el", "la"], "answer": "la",
+      "explanation": "Слова на **-dad, -tad, -ción, -sión** — женского рода: **la ciudad**, la libertad, la estación."
+    },
+    {
+      "id": "art-c5", "type": "choice", "skill": "articulos",
+      "question": "Множественное число от **el libro**:",
+      "options": ["los libros", "las libros", "los libroes", "el libros"], "answer": "los libros",
+      "explanation": "el → **los**, la → **las**; к слову на гласную добавляется **-s**: los libros."
+    },
+    {
+      "id": "art-c6", "type": "choice", "skill": "articulos",
+      "question": "Множественное число от **la flor**:",
+      "options": ["las flores", "las flors", "los flores", "la flores"], "answer": "las flores",
+      "explanation": "К слову на согласную добавляется **-es**: flor → **flores**. Артикль женского рода во множественном — **las**."
+    },
+    {
+      "id": "art-t1", "type": "text", "skill": "articulos",
+      "question": "Напиши с неопределённым артиклем: «(какая-то) машина», вариант для Испании — **coche**",
+      "answers": ["un coche"],
+      "explanation": "Неопределённые артикли: **un** (м. р.), **una** (ж. р.). coche — мужского рода: **un coche**.",
+      "commonMistakes": [{ "answer": "una coche", "explanation": "coche — мужского рода, хоть и на -e. Род слов на -e надо запоминать." }]
+    }
+  ]
+}
