@@ -123,7 +123,7 @@ export class App {
           break;
       }
     }
-    this.root.innerHTML = layout(this.route, this.progress, this.today(), body);
+    this.root.innerHTML = layout(this.route, this.progress, this.today(), body, !this.settings.regionChosen);
     document.body.classList.toggle('has-dock', this.root.querySelector('.dock') !== null);
   }
 

@@ -22,7 +22,15 @@ export type Route =
 
 const ACCENT_CHARS = ['á', 'é', 'í', 'ó', 'ú', 'ñ', 'ü', '¿', '¡'];
 
-export function layout(route: Route, progress: Progress, today: string, body: string): string {
+/** onboarding: до выбора варианта испанского показываем только логотип и экран выбора, без вкладок и счётчиков. */
+export function layout(route: Route, progress: Progress, today: string, body: string, onboarding = false): string {
+  if (onboarding) {
+    return `
+  <header class="top">
+    <span class="logo"><span class="logo-mark" aria-hidden="true">😈</span>${esc(T.appName)}</span>
+  </header>
+  <main class="page">${body}</main>`;
+  }
   const active = (n: string) => (route.name === n || (n === 'rules' && route.name === 'rule') || (n === 'home' && route.name === 'lesson') ? ' aria-current="page"' : '');
   const streak = currentStreak(progress, today);
   return `

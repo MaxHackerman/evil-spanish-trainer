@@ -39,6 +39,11 @@ test('главная, правила, настройки, приветствие
   }
   assert.ok(settingsView(defaultSettings(), p, today, true).includes('data-setting="region"'));
   assert.ok(welcomeView().includes('choose-region'));
+  // До выбора варианта испанского вкладок нет, только экран выбора.
+  const onboarding = layout({ name: 'rules' }, p, today, welcomeView(), true);
+  assert.ok(!onboarding.includes('class="tabs"'));
+  assert.ok(!onboarding.includes('XP'));
+  assert.ok(onboarding.includes('choose-region'));
 });
 
 for (const region of ['es', 'latam'] as const) {
