@@ -162,8 +162,12 @@ const ARTICLES: Record<string, { gender: 'm' | 'f'; definite: boolean }> = {
   una: { gender: 'f', definite: false },
 };
 
-function checkPicture(task: PictureTask, rawGiven: string, region: Region): CheckResult {
+function checkPicture(task: PictureTask, rawInput: string, region: Region): CheckResult {
   const main = nounFor(task, region);
+  // В режиме «артикль» человек выбирает только el / la, а слово показано на экране.
+  const rawGiven = task.mode === 'article' && normalize(rawInput).split(' ').length === 1
+    ? `${normalize(rawInput)} ${main.word}`
+    : rawInput;
   const expected = withArticle(main);
   const otherRegion: Region = region === 'es' ? 'latam' : 'es';
   const regionalOther = 'word' in task.noun ? undefined : task.noun[otherRegion];
@@ -216,8 +220,11 @@ function checkPicture(task: PictureTask, rawGiven: string, region: Region): Chec
 
   if (!articleOk) {
     const code = noun.article ? 'picture.special_article' : 'picture.wrong_article';
+    // Слово с «обманчивым» окончанием (la mano, el mapa) — отдельно напоминаем, что это исключение.
+    const misleading = !noun.article && ((noun.word.endsWith('o') && noun.gender === 'f') || (noun.word.endsWith('a') && noun.gender === 'm'));
     return result(task, 'wrong', rawGiven, target, [
       { code, params: { given: article, article: right, word: noun.word, gender: noun.gender } },
+      ...(misleading ? [{ code: 'picture.gender', params: { word: noun.word, gender: noun.gender, article: right } }] : []),
       ...notes,
     ]);
   }

@@ -105,6 +105,22 @@ test('картинки: артикли, регионы, исключения', (
   assert.equal(checkAnswer(water, 'la agua', es).feedback[0]!.code, 'picture.special_article');
 });
 
+test('картинки в режиме «артикль»: слово дано, выбираем el / la', () => {
+  const art = (t: PictureTask): PictureTask => ({ ...t, mode: 'article' });
+  assert.equal(checkAnswer(art(car), 'el', es).status, 'correct');
+  assert.equal(checkAnswer(art(car), 'el', es).expected, 'el coche');
+  assert.equal(checkAnswer(art(car), 'la', es).feedback[0]!.code, 'picture.wrong_article');
+  assert.equal(checkAnswer(art(pc), 'la', latam).status, 'correct');
+  assert.equal(checkAnswer(art(pc), 'la', es).status, 'wrong');
+  assert.equal(checkAnswer(art(water), 'el', es).status, 'correct');
+  assert.equal(checkAnswer(art(water), 'la', es).feedback[0]!.code, 'picture.special_article');
+  const hand: PictureTask = { ...water, id: 'h', mode: 'article', noun: { word: 'mano', gender: 'f' } };
+  const fb = checkAnswer(hand, 'el', es).feedback.map((f) => f.code);
+  assert.deepEqual(fb, ['picture.wrong_article', 'picture.gender']);
+  // Эталон из отчёта тоже принимается.
+  assert.equal(checkAnswer(art(car), 'el coche', es).status, 'correct');
+});
+
 test('выбор, текст, порядок слов', () => {
   const choice: Task = { id: 'c', type: 'choice', skill: 's', question: 'q', options: ['a', 'b'], answer: 'a', explanation: 'x', wrongExplanations: { b: 'не b' } };
   assert.equal(checkAnswer(choice, 'a', es).status, 'correct');

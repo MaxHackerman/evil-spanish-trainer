@@ -113,6 +113,7 @@ export const T = {
     conjugate: (verb: string, ru: string) => `${verb} — ${ru}`,
     conjugateBare: 'Поставь глагол в нужную форму',
     pictureAsk: 'Что на картинке? Напиши с артиклем (el / la)',
+    articleAsk: 'Какой артикль у этого слова?',
     orderAsk: 'Собери фразу',
     orderReset: 'Сбросить',
     showHint: 'Подсказка',

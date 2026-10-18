@@ -6,15 +6,19 @@
       "level": "A1",
       "description": "С кем говорим: tú или usted, vosotros или ustedes.",
       "ruleId": "pronombres",
-      "skills": ["pronombres"]
+      "skills": [
+        "pronombres"
+      ]
     },
     {
       "id": "sustantivos",
-      "title": "Слова и артикли: дом, еда, вещи",
+      "title": "Род и артикли: дом, еда, вещи",
       "level": "A1",
-      "description": "Что на картинке? Учим слова сразу с артиклем el / la.",
+      "description": "Слово уже написано — выбери el или la.",
       "ruleId": "articulos",
-      "skills": ["articulos"]
+      "skills": [
+        "articulos"
+      ]
     },
     {
       "id": "presente-ar",
@@ -22,13 +26,31 @@
       "level": "A1",
       "description": "Одна схема из шести окончаний — и ты спрягаешь тысячи глаголов.",
       "ruleId": "presente-ar",
-      "skills": ["presente-ar"]
+      "skills": [
+        "presente-ar"
+      ]
     }
   ],
   "rules": [
-    { "id": "lectura", "title": "Чтение и произношение", "level": "A1" },
-    { "id": "pronombres", "title": "Личные местоимения", "level": "A1" },
-    { "id": "articulos", "title": "Род существительных и артикли", "level": "A1" },
-    { "id": "presente-ar", "title": "Настоящее время: глаголы на -ar", "level": "A1" }
+    {
+      "id": "lectura",
+      "title": "Чтение и произношение",
+      "level": "A1"
+    },
+    {
+      "id": "pronombres",
+      "title": "Личные местоимения",
+      "level": "A1"
+    },
+    {
+      "id": "articulos",
+      "title": "Род существительных и артикли",
+      "level": "A1"
+    },
+    {
+      "id": "presente-ar",
+      "title": "Настоящее время: глаголы на -ar",
+      "level": "A1"
+    }
   ]
 }

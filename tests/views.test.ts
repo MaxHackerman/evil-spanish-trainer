@@ -55,7 +55,7 @@ for (const region of ['es', 'latam'] as const) {
       assert.equal(tasks.length, lesson.batchSize);
       let s = startSession(lesson.id, tasks);
 
-      const work = workView(s, lesson, { draft: {}, order: {} }, verbs);
+      const work = workView(s, lesson, { draft: {}, order: {} }, verbs, region);
       for (const t of tasks) assert.ok(work.includes(`data-task-card="${t.id}"`), `карточка ${t.id}`);
       assert.ok(work.includes('data-action="check"'));
       assert.ok(work.includes('data-char="ñ"'));

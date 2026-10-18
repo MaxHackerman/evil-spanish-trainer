@@ -72,6 +72,11 @@ export interface TextTask extends TaskBase {
 
 export interface PictureTask extends TaskBase {
   type: 'picture';
+  /**
+   * 'article' — слово показано, нужно выбрать el / la (тренируем род, а не память на слова).
+   * 'recall' — слово нужно вспомнить и написать самому (по умолчанию).
+   */
+  mode?: 'article' | 'recall';
   image: Image;
   ru: string;
   noun: NounVariant | { es: NounVariant; latam: NounVariant };

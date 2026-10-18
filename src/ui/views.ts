@@ -130,7 +130,7 @@ function hint(text: string | undefined): string {
   return text ? `<details class="hint"><summary>${esc(T.lesson.showHint)}</summary>${md(text)}</details>` : '';
 }
 
-function taskBody(task: Task, ws: WorkState, verbs: VerbDictionary): string {
+function taskBody(task: Task, ws: WorkState, verbs: VerbDictionary, region: Region): string {
   const value = ws.draft[task.id] ?? '';
   switch (task.type) {
     case 'conjugate': {
@@ -165,6 +165,21 @@ function taskBody(task: Task, ws: WorkState, verbs: VerbDictionary): string {
     case 'text':
       return `<p class="question">${md(task.question)}</p>${input(task, value)}${hint(task.hint)}`;
     case 'picture':
+      if (task.mode === 'article') {
+        const word = nounFor(task, region).word;
+        return `
+        <p class="muted small">${esc(T.lesson.articleAsk)}</p>
+        ${imageHtml(task.image)}
+        <p class="noun-line"><span lang="es">${esc(word)}</span> <span class="muted">— ${esc(task.ru)}</span></p>
+        <div class="options inline" role="radiogroup">
+          ${['el', 'la'].map((o) => `
+            <label class="option${value === o ? ' selected' : ''}">
+              <input type="radio" name="${esc(task.id)}" value="${o}" data-task="${esc(task.id)}"${value === o ? ' checked' : ''}>
+              <span lang="es"><b>${o}</b> ${esc(word)}</span>
+            </label>`).join('')}
+        </div>
+        ${hint(task.hint)}`;
+      }
       return `
         <p class="muted small">${esc(T.lesson.pictureAsk)}</p>
         ${imageHtml(task.image)}
@@ -198,7 +213,7 @@ export function isAnswered(task: Task, ws: WorkState): boolean {
   return (ws.draft[task.id] ?? '').trim() !== '';
 }
 
-export function workView(session: Session, lesson: Lesson, ws: WorkState, verbs: VerbDictionary): string {
+export function workView(session: Session, lesson: Lesson, ws: WorkState, verbs: VerbDictionary, region: Region): string {
   const round = currentRound(session);
   const n = session.rounds.length;
   const answered = round.tasks.filter((t) => isAnswered(t, ws)).length;
@@ -212,7 +227,7 @@ export function workView(session: Session, lesson: Lesson, ws: WorkState, verbs:
     ${round.tasks.map((t, i) => `
       <li class="card task" data-task-card="${esc(t.id)}">
         <span class="num">${i + 1}</span>
-        ${taskBody(t, ws, verbs)}
+        ${taskBody(t, ws, verbs, region)}
       </li>`).join('')}
   </ol>
   <div class="dock">

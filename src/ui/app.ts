@@ -131,7 +131,7 @@ export class App {
     if (this.doneHtml) return this.doneHtml;
     if (!this.lesson || !this.active) return notFoundView();
     const { session, work } = this.active;
-    if (session.phase === 'work') return workView(session, this.lesson, work, this.verbs);
+    if (session.phase === 'work') return workView(session, this.lesson, work, this.verbs, this.settings.region);
     if (session.phase === 'report') return reportView(session, this.lesson, this.ctx(), this.settings.tts && this.s.speech.supported);
     return notFoundView();
   }

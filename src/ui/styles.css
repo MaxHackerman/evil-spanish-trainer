@@ -268,3 +268,6 @@ table { border-collapse: collapse; }
 .regional > div.mine { border-color: var(--accent); background: var(--accent-soft); }
 
 .error pre { white-space: pre-wrap; font-size: 0.8rem; color: var(--muted); }
+
+.noun-line { text-align: center; font-size: 1.3rem; margin: 0 0 4px; }
+.options.inline { grid-template-columns: 1fr 1fr; }

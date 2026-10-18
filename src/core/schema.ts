@@ -46,6 +46,7 @@ export function validateTask(t: unknown, verbs?: VerbDictionary): string[] {
       if (!isObj(t.image)) errs.push(e('нет image'));
       else if (t.image.kind === 'url' && !(isStr(t.image.credit) && isStr(t.image.license))) errs.push(e('у картинки нет источника или лицензии'));
       if (!isStr(t.ru)) errs.push(e('нет ru'));
+      if (t.mode !== undefined && t.mode !== 'article' && t.mode !== 'recall') errs.push(e('mode должен быть article или recall'));
       const n = t.noun;
       if (!(checkNoun(n) || (isObj(n) && checkNoun(n.es) && checkNoun(n.latam)))) errs.push(e('неверный noun'));
       break;
